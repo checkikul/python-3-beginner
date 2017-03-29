@@ -1,0 +1,55 @@
+Task 
+Given a string, , of length  that is indexed from  to , print its even-indexed and odd-indexed characters as  space-separated strings on a single line (see the Sample below for more detail).
+
+Note:  is considered to be an even index.
+
+Input Format
+
+The first line contains an integer,  (the number of test cases). 
+Each line  of the  subsequent lines contain a String, .
+
+Constraints
+
+Output Format
+
+For each String  (where ), print 's even-indexed characters, followed by a space, followed by 's odd-indexed characters.
+
+Sample Input
+
+2
+Hacker
+Rank
+
+Sample Output
+
+Hce akr
+Rn ak
+
+"""-----------------------------------------------------------"""
+"""PYTHONIC CODE"""
+"""-----------------------------------------------------------"""
+for i in range(int(input())): 
+    s=input()
+    print(*["".join(s[::2]),"".join(s[1::2])])
+
+
+"""-----------------------------------------------------------"""
+"""WRONG CODE"""
+"""-----------------------------------------------------------"""
+"""Convert this code with reference to the above snippet"""
+def inx_print(cast):
+    str_even = ""
+    str_odd = ""
+    for i in range(0, len(cast)):
+        if i % 2 == 0:
+            str_even += cast[i]
+        else:
+            str_odd += cast[i]
+
+    print (str(str_even) + " " + str(str_odd))
+
+cast = "Hacker Rank"
+str_split = cast.split(" ")
+str_num = len(str_split)
+for j in range(0, str_num):
+    inx_print(str_split[j])
