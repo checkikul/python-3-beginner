@@ -1,6 +1,18 @@
+"""
+#1
+"""
 def sleep_in(weekday, vacation):
   
   return(not weekday or vacation)
   
 print (sleep_in(bool(input("Is it a weekday?")), bool(input("Are you on vacation?"))))
+
+"""
+#2
+"""
+
+def monkey_trouble(a_smile, b_smile):
+  return(a_smile == b_smile)
+
+print (monkey_trouble(input("is A smiling?"), input("is B smiling?")))
 
