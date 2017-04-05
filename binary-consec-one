@@ -1,16 +1,23 @@
-bin_num = 11110111
+#!/bin/python3
 
-str_num = str(bin_num)
+import sys
+
+
+n = int(input().strip())
+
 count = 0
-
+flag = []
+st_n = True
 for i in range(len(str_num)):
   if str_num[i] == "1":
     count += 1
-  else:
-    flag = count
+  elif str_num[i] == "0":
+    while st_n:
+      flag.append(count)
+      break
     count = 0
+  else:
+    st_n = False
+  flag.append(count)
 
-if count != 0:
-  flag = count
-  
-print (flag)
+print (max(flag))
